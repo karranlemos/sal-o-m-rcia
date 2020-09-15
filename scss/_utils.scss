@@ -14,3 +14,30 @@
 .mobile-only {
     display: none !important;
 }
+
+.split-container {
+    display: flex;
+    height: 100%;
+
+    .primary {
+        flex: 4 1;
+    }
+
+    .secondary {
+        flex: 3 1;
+    }
+
+    .primary, .secondary {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: $mobile-width) {
+    .split-container {    
+        .secondary {
+            display: none;
+        }
+    }
+}

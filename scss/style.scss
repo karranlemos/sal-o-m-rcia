@@ -16,9 +16,15 @@ body {
 }
 
 
+.navbar-container {
+    height: $navbar-height;
+}
+
+
 nav {
+    position: fixed;
     background-color: $navbar-bg-color;
-    height: 80px;
+    height: $navbar-height;
     width: 100%;
 
     .container {
@@ -48,6 +54,29 @@ nav {
         }
     }
 }
+
+
+.home-header {
+    background-color: $home-header-bg-color;
+    color: white;
+    
+    padding: 20px;
+    max-height: 350px;
+    height: 100%;
+
+    h2 {
+        font-size: 32px;
+        margin: 0;
+    }
+
+    .logo {
+        background-image: url('../images/brand/logo.png');
+        background-size: auto;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
 
 footer {
     @extend .full-center;
