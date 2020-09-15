@@ -1,0 +1,16 @@
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.full-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mobile-only {
+    display: none !important;
+}

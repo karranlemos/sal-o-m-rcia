@@ -1,0 +1,58 @@
+@import 'normalize';
+@import 'config';
+@import 'utils';
+
+
+.three-areas-layout {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+
+    background-color: $bg-color;
+}
+
+
+nav {
+    background-color: $navbar-bg-color;
+    height: 75px;
+    width: 100%;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+        .nav-item {
+            display: inline-flex;
+            align-items: center;
+            
+            padding: 15px 20px;
+            
+            background-color: $navbar-bg-color;;
+            color: white;
+
+            &:hover {
+                background-color: darken($navbar-bg-color, 4);
+            }
+        }
+
+        .nav-options {
+            display: flex;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+footer {
+    @extend .full-center;
+
+    background-color: $footer-bg-color;
+    color: white;
+    min-height: 70px;
+
+    .container {
+        height: auto;
+    }
+}
