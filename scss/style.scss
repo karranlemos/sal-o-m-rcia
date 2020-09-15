@@ -16,11 +16,6 @@ body {
 }
 
 
-.navbar-container {
-    height: $navbar-height;
-}
-
-
 nav {
     position: fixed;
     background-color: $navbar-bg-color;
@@ -41,7 +36,14 @@ nav {
             color: white;
 
             &:hover {
-                background-color: darken($navbar-bg-color, 4);
+                background-color: lighten($navbar-bg-color, 6);
+            }
+
+            img.logo {
+                object-position: center;
+                object-fit: contain;
+                height: 100%;
+                max-width: 230px;
             }
         }
 
@@ -56,25 +58,19 @@ nav {
 }
 
 
-.home-header {
-    background-color: $home-header-bg-color;
-    color: white;
-    
-    padding: 20px;
-    max-height: 350px;
-    height: 100%;
+.main-header {
+    height: 100vh;
 
     h2 {
         font-size: 32px;
         margin: 0;
     }
+}
 
-    .logo {
-        background-image: url('../images/brand/logo.svg');
-        background-size: 80%;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+
+#home-header {
+    background: $main-header-bg-color url('../images/pages/home.jpg') no-repeat center;
+    background-size: cover;
 }
 
 
