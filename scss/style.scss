@@ -2,6 +2,10 @@
 @import 'config';
 @import 'utils';
 
+body {
+    font-family: $default-fonts;
+    font-size: 15px;
+}
 
 .three-areas-layout {
     display: grid;
@@ -14,7 +18,7 @@
 
 nav {
     background-color: $navbar-bg-color;
-    height: 75px;
+    height: 80px;
     width: 100%;
 
     .container {
@@ -50,7 +54,7 @@ footer {
 
     background-color: $footer-bg-color;
     color: white;
-    min-height: 70px;
+    min-height: 90px;
 
     .container {
         height: auto;
