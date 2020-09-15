@@ -1,0 +1,4 @@
+@mixin page-header($background-url) {
+    background: $main-header-bg-color url($background-url) no-repeat center;
+    background-size: cover;
+}

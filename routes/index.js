@@ -6,19 +6,19 @@ router.use(express.static('public'));
 
 
 router.get('/', (req, res) => {
-    res.render('main');
+    res.render('index');
 });
 
 router.get('/about', (req, res) => {
-    res.send('About');
+    res.render('about');
 });
 
 router.get('/services', (req, res) => {
-    res.send('Services');
+    res.render('services');
 });
 
 router.get('/contact', (req, res) => {
-    res.send('Contact');
+    res.render('contact');
 });
 
 

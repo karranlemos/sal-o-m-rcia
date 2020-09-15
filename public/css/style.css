@@ -73,6 +73,7 @@ pre {
  * Remove the gray background on active links in IE 10.
  */
 a {
+  outline: none;
   background-color: transparent;
 }
 
@@ -435,6 +436,21 @@ nav .container a {
 
 #home-header {
   background: #1e252b url("../images/pages/home.jpg") no-repeat center;
+  background-size: cover;
+}
+
+#about-header {
+  background: #1e252b url("../images/pages/about.jpg") no-repeat center;
+  background-size: cover;
+}
+
+#services-header {
+  background: #1e252b url("../images/pages/services.jpg") no-repeat center;
+  background-size: cover;
+}
+
+#contact-header {
+  background: #1e252b url("../images/pages/contact.jpg") no-repeat center;
   background-size: cover;
 }
 
