@@ -35,12 +35,22 @@
     }
 }
 
+
+
 @media (max-width: $mobile-width) {
     .split-container {    
         .secondary {
             display: none;
         }
     }
+}
+
+.three-areas-layout {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+
+    background-color: $bg-color;
 }
 
 

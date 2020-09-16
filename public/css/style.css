@@ -407,6 +407,13 @@ template {
     display: none;
   }
 }
+.three-areas-layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
 ul.simple-list {
   margin: 0;
   padding: 0;
@@ -518,16 +525,30 @@ ul.simple-list a {
   margin: 0 60px !important;
 }
 
-body {
-  font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 15px;
+footer {
+  background-color: #000000;
+  color: white;
+  min-height: 90px;
+  padding: 40px;
 }
-
-.three-areas-layout {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
-  background-color: #f4f4f4;
+footer .container {
+  height: auto;
+}
+footer .credits {
+  margin-top: 40px;
+}
+footer table {
+  border-collapse: collapse;
+}
+footer table th, footer table td {
+  padding: 5px;
+}
+footer table th {
+  padding-right: 10px;
+  text-align: right;
+}
+footer table tr {
+  text-align: left;
 }
 
 nav#nav {
@@ -654,30 +675,9 @@ nav#nav .container a {
   background-size: cover;
 }
 
-footer {
-  background-color: #000000;
-  color: white;
-  min-height: 90px;
-  padding: 40px;
-}
-footer .container {
-  height: auto;
-}
-footer .credits {
-  margin-top: 40px;
-}
-footer table {
-  border-collapse: collapse;
-}
-footer table th, footer table td {
-  padding: 5px;
-}
-footer table th {
-  padding-right: 10px;
-  text-align: right;
-}
-footer table tr {
-  text-align: left;
+body {
+  font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */

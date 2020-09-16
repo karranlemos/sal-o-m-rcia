@@ -1,0 +1,102 @@
+nav#nav {
+    position: fixed;
+    
+    background-color: $navbar-bg-color;
+    height: $navbar-height;
+    width: 100%;
+
+    z-index: $navbar-z-index;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+        .nav-logo {
+            flex-shrink: 1;
+            overflow: hidden;
+
+            width: 270px;
+            @include config-icon-bg('../images/brand/logo-h.svg', 230px);
+        }
+
+        .nav-item {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            
+            padding: 15px 20px;
+            
+            background-color: $navbar-bg-color;
+            color: white;
+
+            cursor: pointer;
+
+            &:hover {
+                background-color: lighten($navbar-bg-color, 6);
+            }
+
+            img.logo {
+                object-position: center;
+                object-fit: contain;
+                height: 100%;
+                max-width: 230px;
+            }
+
+            &.current-page {
+                background-color: $navbar-current-page-bg-color;
+            }
+        }
+
+        .mobile-menu-button {
+            @extend .mobile-only;
+        }
+
+        .nav-options {
+            display: flex;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+@media (max-width: $mobile-width) {
+    nav#nav {
+        .container .mobile-menu-button {
+            display: inline-flex !important;
+            width: 80px;
+            @include config-icon-bg('../images/icons/Hamburger-white.svg', 20px);
+        }
+
+        .container .nav-options {
+            display: none;
+            flex-direction: column;
+
+            position: absolute;
+
+            top: 100%;
+            max-width: 100%;
+            width: 250px;
+            height: calc(100vh - #{$navbar-height});
+
+            overflow-y: auto;
+            
+            background-color: $navbar-bg-color;
+
+            .nav-item {
+                height: 60px;
+            }
+        }
+
+        &.show {
+            .container .nav-options {
+                display: flex;
+            }
+
+            .container .mobile-menu-button {
+                @include config-icon-bg('../images/icons/Multiplication_Sign-white.svg', 20px);
+            }
+        }
+    }
+}

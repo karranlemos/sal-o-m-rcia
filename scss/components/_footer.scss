@@ -1,0 +1,33 @@
+footer {
+    @extend .full-center;
+
+    background-color: $footer-bg-color;
+    color: white;
+    min-height: 90px;
+    padding: 40px;
+
+    .container {
+        height: auto;
+    }
+
+    .credits {
+        margin-top: 40px;
+    }
+
+    table {
+        border-collapse: collapse;
+    
+        th, td {
+            padding: 5px;
+        }
+    
+        th {
+            padding-right: 10px;
+            text-align: right;
+        }
+
+        tr {
+            text-align: left;
+        }
+    }
+}
