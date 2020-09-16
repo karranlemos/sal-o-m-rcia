@@ -23,10 +23,15 @@ function setVarsEJS(req, res) {
         siteTitle: "Salão da Márcia",
         path: req.path,
         menuLinks: {
-            '/': 'Início',
-            '/about': 'Sobre',
-            '/services': 'Serviços',
-            '/contact': 'Contato'
+            primary: {
+                '/': 'Início',
+                '/about': 'Sobre',
+                '/services': 'Serviços',
+                '/contact': 'Contato'
+            },
+            secondary: {
+                '/credits': 'Créditos'
+            }
         },
         horariosFuncionamento: {
             'Segunda': '10h-18h',

@@ -1,10 +1,9 @@
 <nav id="nav" class="js-nav-menu">
-  <div class="container">
+  <div class="container container-full-height">
     <a href="/" class="nav-item nav-logo"></a>
     <div class="nav-item mobile-menu-button"></div>
     <div class="nav-options">
-      <% const pages = menuLinks; %>
-      <% for (const [link, value] of Object.entries(pages)) { %>
+      <% for (const [link, value] of Object.entries(menuLinks.primary)) { %>
         <a href="<%=link%>" class="nav-item <%=path===link ? 'current-page' : ''%>"><%=value%></a>
       <% } %>
     </div>

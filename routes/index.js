@@ -45,6 +45,10 @@ router.get('/contact', (req, res) => {
     });
 });
 
+router.get('/credits', (req, res) => {
+    res.render('credits');
+});
+
 
 router.use((req, res) => {
     res.status(404).send('Page Not Found');

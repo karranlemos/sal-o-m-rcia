@@ -2,7 +2,20 @@
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
-    height: 100%;
+
+    &-full-height {
+        height: 100%;
+    }
+
+    .content {
+        background-color: white;
+        overflow-x: hidden;
+        min-height: 200px;
+        width: 100%;
+
+        padding: 20px;
+        margin: ($navbar-height+20px) auto 20px auto;
+    }
 }
 
 .full-center {
@@ -63,10 +76,6 @@ ul.simple-list {
     li {
         margin: 10px;
     }
-
-    a {
-        color: white;
-    }
 }
 
 
@@ -92,6 +101,26 @@ ul.simple-list {
     > .big {
         flex-grow: 2;
     }
+
+    .presentation-block {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        height: 250px;
+        padding: 20px;
+
+        .icon {
+            width: 60px;
+            height: 60px;
+            margin: 10px 0;
+        }
+
+        h2 {
+            margin: 10px 0;
+        }
+    }
 }
 
 @media (max-width: $mobile-width) {
@@ -100,6 +129,18 @@ ul.simple-list {
 
         > div {
             flex: 0 0 auto;
+        }
+
+        .presentation-block {
+            margin: 0px;
+            height: auto;
+
+            &:first-child {
+                margin-top: 50px;
+            }
+            &:last-child {
+                margin-bottom: 50px;
+            }
         }
     }
 }
@@ -115,5 +156,11 @@ ul.simple-list {
     }
     .mx-#{$i} {
         margin: 0 #{$i*10}px !important;
+    }
+    .mt-#{$i} {
+        margin-top: #{$i*10}px !important;
+    }
+    .mb-#{$i} {
+        margin-bottom: #{$i*10}px !important;
     }
 }
