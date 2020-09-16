@@ -1,3 +1,29 @@
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/NotoSans/NotoSans-Regular.ttf");
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-style: italic;
+  src: url("../fonts/NotoSans/NotoSans-Italic.ttf");
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/NotoSans/NotoSans-Bold.ttf");
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-style: italic;
+  src: url("../fonts/NotoSans/NotoSans-BoldItalic.ttf");
+}
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -356,7 +382,7 @@ template {
   text-align: center;
 }
 
-.mobile-only {
+.mobile-only, nav .container .mobile-menu-button {
   display: none !important;
 }
 
@@ -404,12 +430,21 @@ nav .container {
   display: flex;
   justify-content: space-between;
 }
+nav .container .nav-logo {
+  flex-shrink: 1;
+  overflow: hidden;
+  width: 270px;
+  background: url("../images/brand/logo-h.svg") no-repeat center;
+  background-size: 230px;
+}
 nav .container .nav-item {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   padding: 15px 20px;
   background-color: #000000;
   color: white;
+  cursor: pointer;
 }
 nav .container .nav-item:hover {
   background-color: #0f0f0f;
@@ -430,6 +465,35 @@ nav .container a {
   text-decoration: none;
 }
 
+@media (max-width: 700px) {
+  nav .container .mobile-menu-button {
+    display: inline-flex !important;
+    width: 80px;
+    background: url("../images/icons/Hamburger-white.svg") no-repeat center;
+    background-size: 20px;
+  }
+  nav .container .nav-options {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    max-width: 100%;
+    width: 250px;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+    background-color: #000000;
+  }
+  nav .container .nav-options .nav-item {
+    height: 60px;
+  }
+  nav.show .container .nav-options {
+    display: flex;
+  }
+  nav.show .container .mobile-menu-button {
+    background: url("../images/icons/Multiplication_Sign-white.svg") no-repeat center;
+    background-size: 20px;
+  }
+}
 .main-header {
   position: relative;
   height: 100vh;

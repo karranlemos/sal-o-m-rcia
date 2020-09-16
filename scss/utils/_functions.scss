@@ -13,3 +13,8 @@
         }
     }
 }
+
+@mixin config-icon-bg($bg-url, $size: 'cover') {
+    background: url($bg-url) no-repeat center;
+    background-size: $size;
+}
