@@ -368,6 +368,11 @@ template {
   display: none;
 }
 
+.anchor-hash {
+  position: relative;
+  top: -80px;
+}
+
 .container {
   max-width: 1000px;
   width: 100%;
@@ -382,7 +387,7 @@ template {
   min-height: 200px;
   width: 100%;
   padding: 20px;
-  margin: 100px auto 20px auto;
+  margin: 20px auto;
 }
 
 .full-center, footer {
@@ -505,6 +510,7 @@ ul.simple-list li {
   outline: none;
   border: none;
   text-decoration: none;
+  cursor: pointer;
 }
 .btn:hover, .btn:visited {
   color: #333;
@@ -517,7 +523,7 @@ ul.simple-list li {
   color: white;
 }
 .btn-primary:hover {
-  background-color: #0b0301;
+  background-color: #190703;
 }
 .btn-primary:hover, .btn-primary:visited {
   color: white;
@@ -651,6 +657,152 @@ ul.simple-list li {
 
 .mb-6 {
   margin-bottom: 60px !important;
+}
+
+.m-7 {
+  margin: 70px !important;
+}
+
+.my-7 {
+  margin: 70px 0 !important;
+}
+
+.mx-7 {
+  margin: 0 70px !important;
+}
+
+.mt-7 {
+  margin-top: 70px !important;
+}
+
+.mb-7 {
+  margin-bottom: 70px !important;
+}
+
+.m-8 {
+  margin: 80px !important;
+}
+
+.my-8 {
+  margin: 80px 0 !important;
+}
+
+.mx-8 {
+  margin: 0 80px !important;
+}
+
+.mt-8 {
+  margin-top: 80px !important;
+}
+
+.mb-8 {
+  margin-bottom: 80px !important;
+}
+
+.m-9 {
+  margin: 90px !important;
+}
+
+.my-9 {
+  margin: 90px 0 !important;
+}
+
+.mx-9 {
+  margin: 0 90px !important;
+}
+
+.mt-9 {
+  margin-top: 90px !important;
+}
+
+.mb-9 {
+  margin-bottom: 90px !important;
+}
+
+.m-10 {
+  margin: 100px !important;
+}
+
+.my-10 {
+  margin: 100px 0 !important;
+}
+
+.mx-10 {
+  margin: 0 100px !important;
+}
+
+.mt-10 {
+  margin-top: 100px !important;
+}
+
+.mb-10 {
+  margin-bottom: 100px !important;
+}
+
+.m-11 {
+  margin: 110px !important;
+}
+
+.my-11 {
+  margin: 110px 0 !important;
+}
+
+.mx-11 {
+  margin: 0 110px !important;
+}
+
+.mt-11 {
+  margin-top: 110px !important;
+}
+
+.mb-11 {
+  margin-bottom: 110px !important;
+}
+
+.m-12 {
+  margin: 120px !important;
+}
+
+.my-12 {
+  margin: 120px 0 !important;
+}
+
+.mx-12 {
+  margin: 0 120px !important;
+}
+
+.mt-12 {
+  margin-top: 120px !important;
+}
+
+.mb-12 {
+  margin-bottom: 120px !important;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  margin: 60px auto;
+}
+.contact-form .form-item {
+  display: block;
+  padding: 15px;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 12px rgba(100, 100, 100, 0.7);
+}
+.contact-form input.form-item, .contact-form textarea.form-item {
+  border-radius: 8px;
+}
+.contact-form textarea.form-item {
+  min-height: 130px;
+  resize: vertical;
+}
+.contact-form h2 {
+  text-align: center;
+  margin: 0 0 10px 0;
 }
 
 footer {
@@ -880,6 +1032,7 @@ a:visited {
 
 h2 {
   font-size: 32px;
+  margin: 15px 0 20px 0;
 }
 
 /*# sourceMappingURL=style.css.map */

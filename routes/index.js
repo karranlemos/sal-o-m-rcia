@@ -35,6 +35,7 @@ router.get('/services', (req, res) => {
     });
 });
 
+
 router.get('/contact', (req, res) => {
     res.render('contact', {
         headerContent: {
@@ -53,6 +54,24 @@ router.get('/credits', (req, res) => {
 router.use((req, res) => {
     res.status(404).send('Page Not Found');
 })
+
+
+
+router.post('/forms/contact', (req, res) => {
+    if (!req.body || req.body.name === undefined || !req.body.email === undefined || !req.body.message === undefined)
+        return res.status(400).json({message: "'name', 'email' and 'message' must be provided."});
+
+    const name = req.body.name;
+    const email = req.body.email;
+    const message = req.body.message;
+
+    // TODO send email
+    
+    return res.json({
+        message: 'Message sent successfully!'
+    });
+});
+
 
 
 module.exports = router;

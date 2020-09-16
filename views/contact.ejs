@@ -1,2 +1,26 @@
 <%- include('inc/main-header', headerContent) %>
+
+<div class="container">
+  <div class="content">
+    <h2>Contato</h2>
+    <p>Caso deseja nos contatar, por favor, utilize um dos meios listados abaixo:</p>
+    <ul>
+      <li>Telefone: (21) 4032-3232</li>
+      <li>salao.marcia@example.com</li>
+    </ul>
+    <p>ou pelo formulário abaixo.</p>
+  </div>
+
+  <a class="anchor-hash" id="contact-form"></a>
+  <div>
+    <div class="contact-form">
+      <h2>Formulário</h2>
+      <input type="text" name="name" placeholder="Nome" class="form-item" required>
+      <input type="email" name="email" placeholder="Email" class="form-item" required>
+      <textarea name="message" placeholder="Mensagem" class="form-item" required></textarea>
+      <button type="submit" class="form-item btn btn-primary">Enviar</button>
+    <div>
+  </div>
+</div>
+
 <%- include('inc/main-footer') %>
