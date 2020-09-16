@@ -6,6 +6,7 @@ body {
     font-size: 15px;
 }
 
+
 .three-areas-layout {
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -15,7 +16,7 @@ body {
 }
 
 
-nav {
+nav#nav {
     position: fixed;
     
     background-color: $navbar-bg-color;
@@ -79,7 +80,7 @@ nav {
 }
 
 @media (max-width: $mobile-width) {
-    nav {
+    nav#nav {
         .container .mobile-menu-button {
             display: inline-flex !important;
             width: 80px;
@@ -172,8 +173,30 @@ footer {
     background-color: $footer-bg-color;
     color: white;
     min-height: 90px;
+    padding: 40px;
 
     .container {
         height: auto;
+    }
+
+    .credits {
+        margin-top: 40px;
+    }
+
+    table {
+        border-collapse: collapse;
+    
+        th, td {
+            padding: 5px;
+        }
+    
+        th {
+            padding-right: 10px;
+            text-align: right;
+        }
+
+        tr {
+            text-align: left;
+        }
     }
 }

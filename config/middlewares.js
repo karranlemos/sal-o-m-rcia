@@ -6,10 +6,7 @@ module.exports = app => {
     app.set('view engine', 'ejs');
     app.set('layout', 'layouts/main-layout.ejs');
     app.use((req, res, next) => {
-        res.locals = Object.assign(res.locals, {
-            siteTitle: "Salão da Márcia",
-            path: req.path
-        });
+        setVarsEJS(req, res);
         next();
     });
 
@@ -18,5 +15,32 @@ module.exports = app => {
 
     app.use((err, req, res, next) => {
         res.status(500).send('Internal Server Error');
+    });
+}
+
+function setVarsEJS(req, res) {
+    res.locals = Object.assign(res.locals, {
+        siteTitle: "Salão da Márcia",
+        path: req.path,
+        menuLinks: {
+            '/': 'Início',
+            '/about': 'Sobre',
+            '/services': 'Serviços',
+            '/contact': 'Contato'
+        },
+        horariosFuncionamento: {
+            'Segunda': '10h-18h',
+            'Terça': '10h-18h',
+            'Quarta': '10h-18h',
+            'Quinta': '10h-18h',
+            'Sexta': '10h-18h',
+            'Sábado': '10h-14h',
+            'Domingo': 'Fechado',
+        },
+        contact: {
+            address: 'Rua Marechal João da Silva, 171, Botafogo - Rio de Janeiro/RJ.',
+            phone: '(21) 4032-3232',
+            email: 'salao.marcia@example.com'
+        }
     });
 }

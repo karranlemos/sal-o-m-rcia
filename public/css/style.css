@@ -382,7 +382,7 @@ template {
   text-align: center;
 }
 
-.mobile-only, nav .container .mobile-menu-button {
+.mobile-only, nav#nav .container .mobile-menu-button {
   display: none !important;
 }
 
@@ -407,6 +407,117 @@ template {
     display: none;
   }
 }
+ul.simple-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+ul.simple-list li {
+  margin: 10px;
+}
+ul.simple-list a {
+  color: white;
+}
+
+.split-blocks {
+  display: flex;
+  gap: 50px;
+}
+.split-blocks > div {
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+}
+.split-blocks > div h2 {
+  margin: 10px 0 25px 0;
+}
+.split-blocks > div table {
+  margin: 0 auto;
+}
+.split-blocks > .big {
+  flex-grow: 2;
+}
+
+@media (max-width: 700px) {
+  .split-blocks {
+    flex-direction: column;
+  }
+  .split-blocks > div {
+    flex: 0 0 auto;
+  }
+}
+.m-1 {
+  margin: 10px !important;
+}
+
+.my-1 {
+  margin: 10px 0 !important;
+}
+
+.mx-1 {
+  margin: 0 10px !important;
+}
+
+.m-2 {
+  margin: 20px !important;
+}
+
+.my-2 {
+  margin: 20px 0 !important;
+}
+
+.mx-2 {
+  margin: 0 20px !important;
+}
+
+.m-3 {
+  margin: 30px !important;
+}
+
+.my-3 {
+  margin: 30px 0 !important;
+}
+
+.mx-3 {
+  margin: 0 30px !important;
+}
+
+.m-4 {
+  margin: 40px !important;
+}
+
+.my-4 {
+  margin: 40px 0 !important;
+}
+
+.mx-4 {
+  margin: 0 40px !important;
+}
+
+.m-5 {
+  margin: 50px !important;
+}
+
+.my-5 {
+  margin: 50px 0 !important;
+}
+
+.mx-5 {
+  margin: 0 50px !important;
+}
+
+.m-6 {
+  margin: 60px !important;
+}
+
+.my-6 {
+  margin: 60px 0 !important;
+}
+
+.mx-6 {
+  margin: 0 60px !important;
+}
+
 body {
   font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 15px;
@@ -419,25 +530,25 @@ body {
   background-color: #f4f4f4;
 }
 
-nav {
+nav#nav {
   position: fixed;
   background-color: #000000;
   height: 80px;
   width: 100%;
   z-index: 1100;
 }
-nav .container {
+nav#nav .container {
   display: flex;
   justify-content: space-between;
 }
-nav .container .nav-logo {
+nav#nav .container .nav-logo {
   flex-shrink: 1;
   overflow: hidden;
   width: 270px;
   background: url("../images/brand/logo-h.svg") no-repeat center;
   background-size: 230px;
 }
-nav .container .nav-item {
+nav#nav .container .nav-item {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -446,33 +557,33 @@ nav .container .nav-item {
   color: white;
   cursor: pointer;
 }
-nav .container .nav-item:hover {
+nav#nav .container .nav-item:hover {
   background-color: #0f0f0f;
 }
-nav .container .nav-item img.logo {
+nav#nav .container .nav-item img.logo {
   object-position: center;
   object-fit: contain;
   height: 100%;
   max-width: 230px;
 }
-nav .container .nav-item.current-page {
+nav#nav .container .nav-item.current-page {
   background-color: #be6a15;
 }
-nav .container .nav-options {
+nav#nav .container .nav-options {
   display: flex;
 }
-nav .container a {
+nav#nav .container a {
   text-decoration: none;
 }
 
 @media (max-width: 700px) {
-  nav .container .mobile-menu-button {
+  nav#nav .container .mobile-menu-button {
     display: inline-flex !important;
     width: 80px;
     background: url("../images/icons/Hamburger-white.svg") no-repeat center;
     background-size: 20px;
   }
-  nav .container .nav-options {
+  nav#nav .container .nav-options {
     display: none;
     flex-direction: column;
     position: absolute;
@@ -483,13 +594,13 @@ nav .container a {
     overflow-y: auto;
     background-color: #000000;
   }
-  nav .container .nav-options .nav-item {
+  nav#nav .container .nav-options .nav-item {
     height: 60px;
   }
-  nav.show .container .nav-options {
+  nav#nav.show .container .nav-options {
     display: flex;
   }
-  nav.show .container .mobile-menu-button {
+  nav#nav.show .container .mobile-menu-button {
     background: url("../images/icons/Multiplication_Sign-white.svg") no-repeat center;
     background-size: 20px;
   }
@@ -547,9 +658,26 @@ footer {
   background-color: #000000;
   color: white;
   min-height: 90px;
+  padding: 40px;
 }
 footer .container {
   height: auto;
+}
+footer .credits {
+  margin-top: 40px;
+}
+footer table {
+  border-collapse: collapse;
+}
+footer table th, footer table td {
+  padding: 5px;
+}
+footer table th {
+  padding-right: 10px;
+  text-align: right;
+}
+footer table tr {
+  text-align: left;
 }
 
 /*# sourceMappingURL=style.css.map */

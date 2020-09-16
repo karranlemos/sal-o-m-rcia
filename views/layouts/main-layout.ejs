@@ -5,17 +5,13 @@
 </head>
 <body>
   <div class="body-container three-areas-layout">
-    <header class="navbar-container">
-      <%-include('./inc/nav')%>
-    </header>
+    <%- include('./inc/header') %>
   
     <main>
       <%- body %>
     </main>
   
-    <footer>
-      <div class="container">Criado por Karran Lemos.</div>
-    </footer>
+    <%- include('./inc/footer') %>
   </div>
 </body>
 </html>
