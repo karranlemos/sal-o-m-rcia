@@ -420,6 +420,9 @@ nav .container .nav-item img.logo {
   height: 100%;
   max-width: 230px;
 }
+nav .container .nav-item.current-page {
+  background-color: #be6a15;
+}
 nav .container .nav-options {
   display: flex;
 }

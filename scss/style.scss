@@ -47,6 +47,10 @@ nav {
                 height: 100%;
                 max-width: 230px;
             }
+
+            &.current-page {
+                background-color: $navbar-current-page-bg-color;
+            }
         }
 
         .nav-options {
