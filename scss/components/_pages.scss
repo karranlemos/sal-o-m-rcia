@@ -9,28 +9,19 @@
         margin: 0;
     }
 
-    .overlay {
+    .text {
+            
+        padding: 30px;
         
-        max-width: 600px;
-        width: 100%;
+        color: #efefef;
 
-        background-color: rgba(#000000, 85%);
-
-        .text {
-            
-            padding: 30px;
-            
-            color: #efefef;
-
-            h2 {
-                font-size: 52px;
-            }
-
-            p {
-                font-size: 20px;
-            }
+        h2 {
+            font-size: 52px;
         }
 
+        p {
+            font-size: 20px;
+        }
     }
 
     .container {
@@ -39,4 +30,20 @@
     }
 }
 
-@include pages-header-backgrounds();
+
+$pages: (
+    'home': '../images/pages/home.jpg',
+    'about': '../images/pages/about.jpg',
+    'services': '../images/pages/services.jpg',
+    'contact': '../images/pages/contact.jpg'
+);
+
+@each $page, $background-url in $pages {
+    ##{$page}-header {
+        background:
+            get-single-overlay($main-header-bg-color, .8),
+            url($background-url)
+            no-repeat center;
+        background-size: cover;
+    }
+}

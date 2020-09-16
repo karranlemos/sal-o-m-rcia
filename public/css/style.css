@@ -719,19 +719,14 @@ nav#nav .container a {
   font-size: 32px;
   margin: 0;
 }
-.main-header .overlay {
-  max-width: 600px;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.85);
-}
-.main-header .overlay .text {
+.main-header .text {
   padding: 30px;
   color: #efefef;
 }
-.main-header .overlay .text h2 {
+.main-header .text h2 {
   font-size: 52px;
 }
-.main-header .overlay .text p {
+.main-header .text p {
   font-size: 20px;
 }
 .main-header .container {
@@ -740,22 +735,22 @@ nav#nav .container a {
 }
 
 #home-header {
-  background: #1e252b url("../images/pages/home.jpg") no-repeat center;
+  background: linear-gradient(to bottom, rgba(15, 14, 13, 0.8), rgba(15, 14, 13, 0.8)), url("../images/pages/home.jpg") no-repeat center;
   background-size: cover;
 }
 
 #about-header {
-  background: #1e252b url("../images/pages/about.jpg") no-repeat center;
+  background: linear-gradient(to bottom, rgba(15, 14, 13, 0.8), rgba(15, 14, 13, 0.8)), url("../images/pages/about.jpg") no-repeat center;
   background-size: cover;
 }
 
 #services-header {
-  background: #1e252b url("../images/pages/services.jpg") no-repeat center;
+  background: linear-gradient(to bottom, rgba(15, 14, 13, 0.8), rgba(15, 14, 13, 0.8)), url("../images/pages/services.jpg") no-repeat center;
   background-size: cover;
 }
 
 #contact-header {
-  background: #1e252b url("../images/pages/contact.jpg") no-repeat center;
+  background: linear-gradient(to bottom, rgba(15, 14, 13, 0.8), rgba(15, 14, 13, 0.8)), url("../images/pages/contact.jpg") no-repeat center;
   background-size: cover;
 }
 

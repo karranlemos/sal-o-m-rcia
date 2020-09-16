@@ -1,20 +1,8 @@
-@mixin pages-header-backgrounds() {
-    $pages: (
-        'home': '../images/pages/home.jpg',
-        'about': '../images/pages/about.jpg',
-        'services': '../images/pages/services.jpg',
-        'contact': '../images/pages/contact.jpg'
-    );
-    
-    @each $page, $background-url in $pages {
-        ##{$page}-header {
-            background: $main-header-bg-color url($background-url) no-repeat center;
-            background-size: cover;
-        }
-    }
-}
-
 @mixin config-icon-bg($bg-url, $size: 'cover') {
     background: url($bg-url) no-repeat center;
     background-size: $size;
+}
+
+@function get-single-overlay($color, $transparency) {
+    @return linear-gradient(to bottom, rgba($color, $transparency), rgba($color, $transparency));
 }
