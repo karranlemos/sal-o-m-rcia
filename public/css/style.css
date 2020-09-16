@@ -712,8 +712,8 @@ nav#nav .container a {
 }
 .main-header {
   position: relative;
+  max-height: 700px;
   height: 100vh;
-  z-index: 1000;
 }
 .main-header h2 {
   font-size: 32px;
@@ -754,9 +754,21 @@ nav#nav .container a {
   background-size: cover;
 }
 
+.main-footer {
+  min-height: 300px;
+  background: linear-gradient(to bottom, rgba(34, 13, 8, 0.8), rgba(34, 13, 8, 0.8)), url("../images/pages/main-footer.jpg") no-repeat center fixed;
+  background-size: cover;
+  flex: 1 1 0;
+}
+
 body {
   font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 15px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
 }
 
 ul {

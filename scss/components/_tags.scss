@@ -3,6 +3,11 @@ body {
     font-size: 15px;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+}
+
 ul {
     margin: 20px 0;
 

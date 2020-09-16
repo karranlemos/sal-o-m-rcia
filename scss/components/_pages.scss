@@ -1,8 +1,8 @@
 .main-header {
     position: relative;
 
+    max-height: 700px;
     height: 100vh;
-    z-index: $main-header-z-index;
 
     h2 {
         font-size: 32px;
@@ -46,4 +46,15 @@ $pages: (
             no-repeat center;
         background-size: cover;
     }
+}
+
+
+.main-footer {
+    min-height: 300px;
+    background:
+        get-single-overlay($main-footer-bg-color, .8),
+        url('../images/pages/main-footer.jpg')
+        no-repeat center fixed;
+        background-size: cover;
+    flex: 1 1 0;
 }
