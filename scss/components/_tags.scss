@@ -2,3 +2,11 @@ body {
     font-family: $default-fonts;
     font-size: 15px;
 }
+
+ul {
+    margin: 20px 0;
+
+    li {
+        margin: 10px 0;
+    }
+}
