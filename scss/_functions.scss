@@ -1,4 +1,15 @@
-@mixin page-header($background-url) {
-    background: $main-header-bg-color url($background-url) no-repeat center;
-    background-size: cover;
+@mixin pages-header-backgrounds() {
+    $pages: (
+        'home': '../images/pages/home.jpg',
+        'about': '../images/pages/about.jpg',
+        'services': '../images/pages/services.jpg',
+        'contact': '../images/pages/contact.jpg'
+    );
+    
+    @each $page, $background-url in $pages {
+        ##{$page}-header {
+            background: $main-header-bg-color url($background-url) no-repeat center;
+            background-size: cover;
+        }
+    }
 }

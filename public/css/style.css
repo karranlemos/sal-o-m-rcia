@@ -398,6 +398,7 @@ nav {
   background-color: #000000;
   height: 80px;
   width: 100%;
+  z-index: 1100;
 }
 nav .container {
   display: flex;
@@ -427,11 +428,32 @@ nav .container a {
 }
 
 .main-header {
+  position: relative;
   height: 100vh;
+  z-index: 1000;
 }
 .main-header h2 {
   font-size: 32px;
   margin: 0;
+}
+.main-header .overlay {
+  max-width: 600px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+.main-header .overlay .text {
+  padding: 30px;
+  color: #efefef;
+}
+.main-header .overlay .text h2 {
+  font-size: 52px;
+}
+.main-header .overlay .text p {
+  font-size: 20px;
+}
+.main-header .container {
+  display: flex;
+  align-items: center;
 }
 
 #home-header {
