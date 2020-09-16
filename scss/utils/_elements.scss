@@ -1,3 +1,7 @@
+.hidden {
+    display: none;
+}
+
 .anchor-hash {
     position: relative;
     top: -$navbar-height;
@@ -237,7 +241,7 @@ ul.simple-list {
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
 
     max-width: 600px;
     margin: 60px auto;
@@ -248,7 +252,10 @@ ul.simple-list {
 
         outline: none;
         border: none;
-        box-shadow: 0 0 12px rgba(100, 100, 100, .7);
+    }
+    
+    .form-item, .message-box {
+        box-shadow: 0 0 20px rgba(100, 100, 100, .7);
     }
 
     input.form-item, textarea.form-item {
@@ -262,6 +269,50 @@ ul.simple-list {
 
     h2 {
         text-align: center;
-        margin: 0 0 10px 0;
+        margin: 0;
+    }
+
+    .message-box {
+        min-height: 30px;
+        width: 100%;
+        padding: 20px;
+    
+        background-color: rgb(50, 50, 50);
+        color: white;
+    
+        &.success {
+            background-color: rgb(0, 50, 0);
+        }
+    
+        &.failure {
+            background-color: rgb(50, 0, 0);
+        }
+    }
+
+    .btn-primary {
+        background-color: lighten($btn-primary-bg-color, 3);
+
+        &:hover {
+            background-color: $btn-primary-bg-color;
+        }
+    }
+}
+
+
+
+.message-box {
+    min-height: 30px;
+    width: 100%;
+    padding: 20px;
+
+    background-color: rgb(44, 44, 44);
+    color: white;
+
+    &.success {
+        background-color: rgb(0, 37, 0);
+    }
+
+    &.failure {
+        background-color: rgb(37, 0, 0);
     }
 }

@@ -13,13 +13,14 @@
 
   <a class="anchor-hash" id="contact-form"></a>
   <div>
-    <div class="contact-form">
+    <form action="" method="post" class="js-form contact-form" data-url-submit="/forms/contact">
       <h2>Formulário</h2>
-      <input type="text" name="name" placeholder="Nome" class="form-item" required>
-      <input type="email" name="email" placeholder="Email" class="form-item" required>
-      <textarea name="message" placeholder="Mensagem" class="form-item" required></textarea>
-      <button type="submit" class="form-item btn btn-primary">Enviar</button>
-    <div>
+      <div class="js-message-box-container hidden"></div>
+      <input type="text" name="name" placeholder="Nome" class="js-form-item form-item" required>
+      <input type="email" name="email" placeholder="Email" class="js-form-item form-item" required>
+      <textarea name="message" placeholder="Mensagem" class="js-form-item form-item" required></textarea>
+      <button class="js-form-submit form-item btn btn-primary">Enviar</button>
+    <form>
   </div>
 </div>
 

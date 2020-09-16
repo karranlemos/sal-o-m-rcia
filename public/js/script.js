@@ -1,10 +1,11 @@
 const _STATIC_MENU = {
-    transitionTime: 200
+    transitionTime: 200,
+    className: 'js-nav-menu'
 };
 class Menu {
     constructor(menu) {
         this.menu = menu;
-        if (!$(menu).hasClass('js-nav-menu'))
+        if (!$(menu).hasClass(_STATIC_MENU.className))
             throw 'Wrong class...';
         
         this.mobileMenuButton = $(menu).find('.mobile-menu-button')[0];
@@ -21,7 +22,6 @@ class Menu {
         });
 
         $(window).click((e) => {
-            console.log($(this.menu).find(e.target));
             if (this.menu != e.target && $(this.menu).find(e.target).length === 0)
                 this.closeMenu();
         });
@@ -29,7 +29,6 @@ class Menu {
 
     toggleMenu = () => {
         
-
         if (this.isMenuOpen())
             this.closeMenu();
         else
@@ -53,7 +52,7 @@ class Menu {
 
 
     static initAll() {
-        const menus = $('.js-nav-menu');
+        const menus = $('.'+_STATIC_MENU.className);
         $.each(menus, (i, menu) => {
             try {
                 new Menu(menu);
@@ -61,10 +60,124 @@ class Menu {
             catch (err) {
                 console.log(`Menu[${i}]: ${err}`);
             }
-        })
+        });
     }
 }
 
+
+
+const _STATIC_FORM = {
+    className: 'js-form'
+};
+class Form {
+    constructor(form) {
+        this.form = form;
+        if (!$(this.form).hasClass(_STATIC_FORM.className))
+            throw 'Wrong class...';
+
+        this.url = $(this.form).attr('data-url-submit');
+        if (!this.url)
+            throw "'data-url-submit' attribute not found...";
+
+        this.errorContainer = $(this.form).find('.js-message-box-container');
+        if (!this.errorContainer)
+            throw "'.js-message-box-container' not found...";
+
+        this.button = $(this.form).find('.js-form-submit:first')[0];
+        if (!this.button)
+            throw "'.js-form-submit' not found...";
+
+
+        const formItemsArray = $(this.form).find('.js-form-item');
+        this.formItems = {};
+        $.each(formItemsArray, (i, formItem) => {
+            const name = $(formItem).attr('name');
+            if (!name)
+                return;
+            
+            this.formItems[name] = formItem;
+        });
+
+        $(this.form).on('submit', this.submitForm);
+    }
+
+    submitForm = (e) => {
+        e.preventDefault();
+
+        $.ajax({
+            method: 'post',
+            url: this.url,
+            data: this.getFormValues(),
+            dataType: 'json'
+        }).done((data, textStatus, xhl) => {
+            var message;
+            if (xhl.responseJSON && xhl.responseJSON.message)
+                message = xhl.responseJSON.message;
+            else
+                message = 'Submitted successfully!';
+
+            this.form.reset();
+            this.showSuccess(message);
+        }).fail(xhl => {
+            var message;
+            if (xhl.responseJSON && xhl.responseJSON.message)
+                message = xhl.responseJSON.message;
+            else
+                message = 'Unknown Error.';
+            this.showFailure(message);
+        });
+    };
+
+    getFormValues = () => {
+        const formValues = {};
+        $.each(this.formItems, (name, formItem) => {
+            formValues[name] = $(formItem).val();
+        });
+        return formValues;
+    };
+
+
+
+    showSuccess = (message) => {
+        this.showMessage(message, 'success');
+    }
+
+    showFailure = (message) => {
+        this.showMessage(message, 'failure');
+    }
+
+    showMessage = (message, type='failure') => {
+        $(this.errorContainer).removeClass('hidden');
+        $(this.errorContainer).empty();
+        $(this.errorContainer).append(`<div class="message-box ${type}">${message}</div>`);
+    };
+
+
+
+    static initAll() {
+        const forms = $('.'+_STATIC_FORM.className);
+        $.each(forms, (i, form) => {
+            try {
+                new Form(form);
+            }
+            catch (err) {
+                console.log(`Form[${i}]: ${err}`);
+            }
+        });
+    }
+}
+
+
+
+class Helper {
+    constructor() {
+        throw 'Static Class...';
+    }
+}
+
+
+
 $(() => {
     Menu.initAll();
+    Form.initAll();
 })

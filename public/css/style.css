@@ -368,6 +368,10 @@ template {
   display: none;
 }
 
+.hidden {
+  display: none;
+}
+
 .anchor-hash {
   position: relative;
   top: -80px;
@@ -782,7 +786,7 @@ ul.simple-list li {
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   max-width: 600px;
   margin: 60px auto;
 }
@@ -791,7 +795,9 @@ ul.simple-list li {
   padding: 15px;
   outline: none;
   border: none;
-  box-shadow: 0 0 12px rgba(100, 100, 100, 0.7);
+}
+.contact-form .form-item, .contact-form .message-box {
+  box-shadow: 0 0 20px rgba(100, 100, 100, 0.7);
 }
 .contact-form input.form-item, .contact-form textarea.form-item {
   border-radius: 8px;
@@ -802,7 +808,40 @@ ul.simple-list li {
 }
 .contact-form h2 {
   text-align: center;
-  margin: 0 0 10px 0;
+  margin: 0;
+}
+.contact-form .message-box {
+  min-height: 30px;
+  width: 100%;
+  padding: 20px;
+  background-color: #323232;
+  color: white;
+}
+.contact-form .message-box.success {
+  background-color: #003200;
+}
+.contact-form .message-box.failure {
+  background-color: #320000;
+}
+.contact-form .btn-primary {
+  background-color: #391107;
+}
+.contact-form .btn-primary:hover {
+  background-color: #2b0d05;
+}
+
+.message-box {
+  min-height: 30px;
+  width: 100%;
+  padding: 20px;
+  background-color: #2c2c2c;
+  color: white;
+}
+.message-box.success {
+  background-color: #002500;
+}
+.message-box.failure {
+  background-color: #250000;
 }
 
 footer {

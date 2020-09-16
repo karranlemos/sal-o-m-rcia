@@ -46,14 +46,13 @@ router.get('/contact', (req, res) => {
     });
 });
 
+router.post('/contact', (req, res) => {
+    res.redirect('/contact');
+});
+
 router.get('/credits', (req, res) => {
     res.render('credits');
 });
-
-
-router.use((req, res) => {
-    res.status(404).send('Page Not Found');
-})
 
 
 
@@ -71,6 +70,12 @@ router.post('/forms/contact', (req, res) => {
         message: 'Message sent successfully!'
     });
 });
+
+
+
+router.use((req, res) => {
+    res.status(404).send('Page Not Found');
+})
 
 
 
