@@ -4,7 +4,7 @@
     <div class="nav-item mobile-menu-button"></div>
     <div class="nav-options">
       <% for (const [link, value] of Object.entries(menuLinks.primary)) { %>
-        <a href="<%=link%>" class="nav-item <%=path===link ? 'current-page' : ''%>"><%=value%></a>
+        <a href="<%=link%>" class="nav-item <%=isCurrentPath(link) ? 'current-page' : ''%>"><%=value%></a>
       <% } %>
     </div>
   </div>

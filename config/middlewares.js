@@ -21,7 +21,11 @@ module.exports = app => {
 function setVarsEJS(req, res) {
     res.locals = Object.assign(res.locals, {
         siteTitle: "Salão da Márcia",
-        path: req.path,
+        isCurrentPath: (link) => {
+            var path = req.path;
+            path = (path.slice(-1) === '/' && path.length > 1) ? path.slice(0, -1) : path;
+            return (path === link);
+        },
         menuLinks: {
             primary: {
                 '/': 'Início',
