@@ -82,6 +82,25 @@ $pages: (
     }
 }
 
+@media screen and (max-width: $mobile-width) {
+    .soliciting-container {
+        flex-direction: column;
+
+        .primary {
+            order: 2;
+            padding-top: 20px;
+            padding-bottom: 40px;
+        }
+        
+        .secondary {
+            order: 1;
+            min-height: 250px;
+            display: inherit;
+        }
+    }
+}
+
+
 .soliciting-container.prices {
     .secondary {
         background:

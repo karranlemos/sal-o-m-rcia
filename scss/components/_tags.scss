@@ -16,3 +16,15 @@ ul {
         margin: 10px 0;
     }
 }
+
+a {
+    color: $a-color;
+
+    &:visited {
+        color: $a-color-visited;
+    }
+}
+
+h2 {
+    font-size: 32px;
+}
