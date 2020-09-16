@@ -34,24 +34,28 @@
     height: 100%;
 
     .primary {
-        flex: 4 1;
+        flex: 8 1;
     }
 
     .secondary {
-        flex: 3 1;
+        flex: 7 1;
     }
 
     .primary, .secondary {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        padding: 20px;
     }
 }
 
 
 
 @media (max-width: $mobile-width) {
-    .split-container {    
+    .split-container {   
+        text-align: center;
+
         .secondary {
             display: none;
         }
@@ -141,6 +145,46 @@ ul.simple-list {
             &:last-child {
                 margin-bottom: 50px;
             }
+        }
+    }
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    min-height: 40px;
+    min-width: 60px;
+
+    background-color: $btn-bg-color;
+    color: $btn-color;
+
+    outline: none;
+    border: none;
+
+    text-decoration: none;
+
+    &:hover {
+        background-color: darken($btn-bg-color, 7);
+    }
+
+    &-primary {
+        background-color: $btn-primary-bg-color;
+        color: $btn-primary-color;
+
+        &:hover {
+            background-color: darken($btn-primary-bg-color, 7);
+        }
+    }
+
+    &-secondary {
+        background-color: $btn-secondary-bg-color;
+        color: $btn-secondary-color;
+
+        &:hover {
+            background-color: darken($btn-secondary-bg-color, 7);
         }
     }
 }
