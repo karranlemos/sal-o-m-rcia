@@ -181,7 +181,7 @@ $(() => {
     Menu.initAll();
     Form.initAll();
 
-    $('.carousel').carousel({
+    $('.carousel.wide-slideshow').carousel({
         wrap: true
     });
 })
