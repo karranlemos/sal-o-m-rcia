@@ -918,6 +918,7 @@ ul.simple-list li {
 }
 
 footer {
+  overflow-x: hidden;
   background-color: #000000;
   color: white;
   min-height: 90px;
