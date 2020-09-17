@@ -8,11 +8,6 @@
         max-height: 700px;
     }
 
-    h2 {
-        font-size: 32px;
-        margin: 0;
-    }
-
     .text {
             
         padding: 30px;
@@ -20,10 +15,14 @@
         color: #efefef;
 
         h2 {
-            font-size: 52px;
+            font-weight: 500;
+            font-size: 64px;
+            line-height: 1.1;
+            margin-bottom: 12px;
         }
 
         p {
+            margin-top: 10px;
             font-size: 20px;
         }
     }
@@ -72,7 +71,11 @@ $pages: (
     min-height: 500px;
 
     h2 {
-        font-size: 28px;
+        font-size: 31px;
+    }
+
+    h2, p {
+        margin: 12px 0;
     }
 
     .primary {
