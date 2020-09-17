@@ -237,14 +237,15 @@ ul.simple-list {
 }
 
 
-
+$contact-form-max-width: 600px;
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 30px;
 
-    max-width: 600px;
+    max-width: $contact-form-max-width;
     margin: 60px auto;
+    padding: 0 15px;
 
     .form-item {
         display: block;
@@ -298,12 +299,26 @@ ul.simple-list {
     }
 }
 
+@media screen and (max-width: $contact-form-max-width) {
+    .contact-form {
+        input.form-item, textarea.form-item {
+            border-radius: 0;
+        }
+    }
+}
+
+
+
 .services-container {
     display: flex;
     flex-direction: column;
     gap: 15px;
 
     margin: 40px 0;
+
+    h2 {
+        text-align: center;
+    }
 
     .service-row {
         display: flex;

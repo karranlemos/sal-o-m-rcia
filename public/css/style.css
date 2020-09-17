@@ -789,6 +789,7 @@ ul.simple-list li {
   gap: 30px;
   max-width: 600px;
   margin: 60px auto;
+  padding: 0 15px;
 }
 .contact-form .form-item {
   display: block;
@@ -830,11 +831,19 @@ ul.simple-list li {
   background-color: #2b0d05;
 }
 
+@media screen and (max-width: 600px) {
+  .contact-form input.form-item, .contact-form textarea.form-item {
+    border-radius: 0;
+  }
+}
 .services-container {
   display: flex;
   flex-direction: column;
   gap: 15px;
   margin: 40px 0;
+}
+.services-container h2 {
+  text-align: center;
 }
 .services-container .service-row {
   display: flex;
