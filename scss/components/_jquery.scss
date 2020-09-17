@@ -32,7 +32,7 @@
 
         $slides: (
             1: '../images/pages/home.jpg',
-            2: '../images/pages/about.jpg'
+            2: '../images/pages/home2.jpg'
         );
         @each $i, $url in $slides {
             &.slide#{$i} {
