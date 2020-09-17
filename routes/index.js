@@ -50,7 +50,9 @@ router.post('/forms/contact', (req, res) => {
 
 
 router.use((req, res) => {
-    res.status(404).send('Page Not Found');
+    res.status(404).render('error', {
+        errorMessage: 'Page Not Found'
+    });
 })
 
 
