@@ -16,7 +16,7 @@
         height: 100%;
     }
 
-    .content {
+    > .content {
         background-color: white;
         overflow-x: hidden;
         min-height: 200px;
@@ -298,6 +298,46 @@ ul.simple-list {
     }
 }
 
+.services-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    margin: 40px 0;
+
+    .service-row {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        padding: 20px 25px;
+        background-color: white;
+
+        header {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+
+            .name {
+                
+            }
+
+            .dots {
+                display: block;
+                margin: 3px 8px;
+                border-bottom: 1px dashed black;
+            }
+
+            .price {
+                
+            }
+        }
+
+        .content {
+
+        }
+    }
+}
+
 
 
 .message-box {
@@ -316,8 +356,6 @@ ul.simple-list {
         background-color: rgb(37, 0, 0);
     }
 }
-
-
 
 .video-player-container {
     margin: 40px 0;

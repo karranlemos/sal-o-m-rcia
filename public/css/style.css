@@ -385,7 +385,7 @@ template {
 .container-full-height {
   height: 100%;
 }
-.container .content {
+.container > .content {
   background-color: white;
   overflow-x: hidden;
   min-height: 200px;
@@ -830,6 +830,28 @@ ul.simple-list li {
   background-color: #2b0d05;
 }
 
+.services-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 40px 0;
+}
+.services-container .service-row {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 25px;
+  background-color: white;
+}
+.services-container .service-row header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+}
+.services-container .service-row header .dots {
+  display: block;
+  margin: 3px 8px;
+  border-bottom: 1px dashed black;
+}
 .message-box {
   min-height: 30px;
   width: 100%;
