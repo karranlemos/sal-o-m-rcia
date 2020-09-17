@@ -169,7 +169,7 @@ class Form {
 
 
 
-class Helper {
+class Helpers {
     constructor() {
         throw 'Static Class...';
     }
