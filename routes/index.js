@@ -34,13 +34,7 @@ router.get('/about', (req, res) => {
 });
 
 router.get('/services', (req, res) => {
-    res.render('services', {
-        headerContent: {
-            page: 'services',
-            title: 'Nossos Serviços',
-            text: 'A nossa lista de serviços tem tudo o que você poderia procurar.'
-        }
-    });
+    res.render('services');
 });
 
 
