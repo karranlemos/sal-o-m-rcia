@@ -903,6 +903,7 @@ ul.simple-list li {
   text-align: center;
 }
 .video-player-container iframe {
+  background-color: #161616;
   width: 100%;
   max-width: 560px;
   height: 315px;
