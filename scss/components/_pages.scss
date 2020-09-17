@@ -1,8 +1,12 @@
 .main-header {
     position: relative;
 
-    max-height: 700px;
+    max-height: 500px;
     height: 100vh;
+
+    &.big {
+        max-height: 700px;
+    }
 
     h2 {
         font-size: 32px;
@@ -63,7 +67,9 @@ $pages: (
 
 
 .soliciting-container {
-    margin: 20px 0;
+    margin: 60px 0;
+
+    min-height: 500px;
 
     h2 {
         font-size: 28px;
@@ -79,6 +85,10 @@ $pages: (
 
     .btn {
         min-width: 150px;
+    }
+
+    &+& {
+        margin-top: 80px;
     }
 }
 

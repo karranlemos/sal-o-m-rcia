@@ -410,10 +410,10 @@ template {
   height: 100%;
 }
 .split-container .primary {
-  flex: 8 1;
+  flex: 1 1;
 }
 .split-container .secondary {
-  flex: 7 1;
+  flex: 1 1;
 }
 .split-container .primary, .split-container .secondary {
   display: flex;
@@ -991,8 +991,11 @@ nav#nav .container a {
 }
 .main-header {
   position: relative;
-  max-height: 700px;
+  max-height: 500px;
   height: 100vh;
+}
+.main-header.big {
+  max-height: 700px;
 }
 .main-header h2 {
   font-size: 32px;
@@ -1041,7 +1044,8 @@ nav#nav .container a {
 }
 
 .soliciting-container {
-  margin: 20px 0;
+  margin: 60px 0;
+  min-height: 500px;
 }
 .soliciting-container h2 {
   font-size: 28px;
@@ -1054,6 +1058,9 @@ nav#nav .container a {
 }
 .soliciting-container .btn {
   min-width: 150px;
+}
+.soliciting-container + .soliciting-container {
+  margin-top: 80px;
 }
 
 @media screen and (max-width: 700px) {
