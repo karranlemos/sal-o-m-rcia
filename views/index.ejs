@@ -1,3 +1,19 @@
+<%
+const headerContent = {
+  page: 'home',
+  slides: {
+      slide1: {
+          title: 'Salão da Márcia',
+          text: 'Exaltando a sua beleza natural!'
+      },
+      slide2: {
+          title: 'Experiência confirmada',
+          text: 'Há mais de 20 anos no mercado.'
+      }
+  }
+};
+%>
+
 <div class="mobile-only">
   <%Object.assign(headerContent.slides.slide1, {page: headerContent.page});%>
   <%- include('inc/main-header', Object.assign(headerContent.slides.slide1), {page: headerContent.page}) %>

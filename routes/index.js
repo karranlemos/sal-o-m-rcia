@@ -6,31 +6,11 @@ router.use(express.static('public'));
 
 
 router.get('/', (req, res) => {
-    res.render('index', {
-        headerContent: {
-            page: 'home',
-            slides: {
-                slide1: {
-                    title: 'Salão da Márcia',
-                    text: 'Exaltando a sua beleza natural.'
-                },
-                slide2: {
-                    title: 'Experiência confirmada',
-                    text: '20 anos de experiência no mercado.'
-                }
-            }
-        }
-    });
+    res.render('index');
 });
 
 router.get('/about', (req, res) => {
-    res.render('about', {
-        headerContent: {
-            page: 'about',
-            title: 'Sobre Nós',
-            text: 'Somos um salão de beleza especializado em exaltar a sua beleza com um sorriso no rosto.'
-        }
-    });
+    res.render('about');
 });
 
 router.get('/services', (req, res) => {
@@ -39,13 +19,7 @@ router.get('/services', (req, res) => {
 
 
 router.get('/contact', (req, res) => {
-    res.render('contact', {
-        headerContent: {
-            page: 'contact',
-            title: 'Contato',
-            text: 'Contate-nos!'
-        }
-    });
+    res.render('contact');
 });
 
 router.post('/contact', (req, res) => {
