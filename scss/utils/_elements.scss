@@ -349,17 +349,19 @@ $contact-form-max-width: 600px;
             grid-template-columns: auto 1fr auto;
 
             .name {
-                
+                font-size: 19px;
+                font-weight: bold;
+                font-family: 'Quicksand', $default-fonts;
             }
 
             .dots {
-                display: block;
-                margin: 3px 8px;
+                margin: 6px 8px;
                 border-bottom: 1px dashed black;
             }
 
             .price {
-                
+                display: flex;
+                align-items: center;
             }
         }
 

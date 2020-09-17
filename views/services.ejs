@@ -13,85 +13,30 @@
       <h2>Serviços e Preços</h2>
     </div>
 
-    <div class="service-row">
-      <header>
-        <div class="name">Corte de cabelo</div>
-        <div class="dots"></div>
-        <div class="price">R$60,00</div>
-      </header>
-    </div>
-    <div class="service-row">
-      <header>
-        <div class="name">Reconstrução</div>
-        <div class="dots"></div>
-        <div class="price">R$60,00</div>
-      </header>
-    </div>
-    <div class="service-row">
-      <header>
-        <div class="name">Hidratação</div>
-        <div class="dots"></div>
-        <div class="price">R$45,00</div>
-      </header>
-    </div>
-    <div class="service-row">
-      <header>
-        <div class="name">Coloração</div>
-        <div class="dots"></div>
-        <div class="price">R$200,00</div>
-      </header>
-    </div>
-    <div class="service-row">
-      <header>
-        <div class="name">Manicure</div>
-        <div class="dots"></div>
-        <div class="price">R$40,00</div>
-      </header>
-    </div>
-    <div class="service-row">
-      <header>
-        <div class="name">Pedicure</div>
-        <div class="dots"></div>
-        <div class="price">R$35,00</div>
-      </header>
-    </div>
-    <div class="service-row">
-      <header>
-        <div class="name">Sobrancelha</div>
-        <div class="dots"></div>
-        <div class="price">R$25,00</div>
-      </header>
-    </div>
-    <div class="service-row">
-      <header>
-        <div class="name">Depilação de Axila</div>
-        <div class="dots"></div>
-        <div class="price">R$45,00</div>
-      </header>
-    </div>
-    <div class="service-row">
-      <header>
-        <div class="name">Depilação de Buço</div>
-        <div class="dots"></div>
-        <div class="price">R$45,00</div>
-      </header>
-    </div>
-    <div class="service-row">
-      <header>
-        <div class="name">Messagem</div>
-        <div class="dots"></div>
-        <div class="price">R$100,00</div>
-      </header>
-    </div>
-    <div class="service-row">
-      <header>
-        <div class="name">Spa</div>
-        <div class="dots"></div>
-        <div class="price">R$150,00</div>
-      </header>
-    </div>
+    <%
+    const services = {
+      'Corte de cabelo': 'R$60,00',
+      'Reconstrução': 'R$50,00',
+      'Hidratação': 'R$45,00',
+      'Coloração': 'R$200,00',
+      'Manicure': 'R$40,00',
+      'Pedicure': 'R$35,00',
+      'Sobrancelha': 'R$25,00',
+      'Depilação de Axila': 'R$45,00',
+      'Depilação de Buço': 'R$45,00',
+      'Massagem': 'R$100,00',
+      'Spa': 'R$150,00'
+    };
+    for (const [service, price] of Object.entries(services)) { %>
+      <div class="service-row">
+        <header>
+          <div class="name"><%=service%></div>
+          <div class="dots"></div>
+          <div class="price"><%=price%></div>
+        </header>
+      </div>
+    <% } %>
   </div>
-
 </div>
 
 <%- include('inc/main-footer') %>

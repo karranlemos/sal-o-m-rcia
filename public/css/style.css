@@ -879,10 +879,18 @@ ul.simple-list li {
   display: grid;
   grid-template-columns: auto 1fr auto;
 }
+.services-container .service-row header .name {
+  font-size: 19px;
+  font-weight: bold;
+  font-family: "Quicksand", "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
 .services-container .service-row header .dots {
-  display: block;
-  margin: 3px 8px;
+  margin: 6px 8px;
   border-bottom: 1px dashed black;
+}
+.services-container .service-row header .price {
+  display: flex;
+  align-items: center;
 }
 .message-box {
   min-height: 30px;
