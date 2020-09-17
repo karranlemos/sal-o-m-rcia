@@ -844,6 +844,16 @@ ul.simple-list li {
   background-color: #250000;
 }
 
+.video-player-container {
+  margin: 40px 0;
+  text-align: center;
+}
+.video-player-container iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+}
+
 footer {
   background-color: #000000;
   color: white;

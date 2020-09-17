@@ -316,3 +316,16 @@ ul.simple-list {
         background-color: rgb(37, 0, 0);
     }
 }
+
+
+
+.video-player-container {
+    margin: 40px 0;
+    text-align: center;
+
+    iframe {
+        width: 100%;
+        max-width: 560px;
+        height: 315px;
+    }
+}
