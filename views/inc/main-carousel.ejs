@@ -1,0 +1,23 @@
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="10000">
+  <div class="carousel-inner">
+    <%
+    var i = 0;
+    for (const [key, text] of Object.entries(slides)) { %>
+      <div class="carousel-item js-slide-<%=i+1%> <%=key%> <%=(i++)==0 ? 'active' : ''%>">
+        <div class="container">
+          <div class="text">
+            <h2><%=text.title%></h2>
+            <p><%=text.text%></p>
+          </div>
+        </div>
+      </div>
+    <% } %>
+  </div>
+  <ol class="carousel-indicators">
+    <%
+    i = 0;
+    for (const [key, text] of Object.entries(slides)) { %>
+      <li data-target="#carouselExampleIndicators" data-slide-to="<%=i%>" class="<%=(i++)==0 ? 'active' : ''%>"></li>
+    <% } %>
+  </ol>
+</div>

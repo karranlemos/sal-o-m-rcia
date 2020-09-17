@@ -180,4 +180,8 @@ class Helpers {
 $(() => {
     Menu.initAll();
     Form.initAll();
+
+    $('.carousel').carousel({
+        wrap: true
+    });
 })

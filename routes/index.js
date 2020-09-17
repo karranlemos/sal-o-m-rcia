@@ -9,8 +9,16 @@ router.get('/', (req, res) => {
     res.render('index', {
         headerContent: {
             page: 'home',
-            title: 'Salão da Márcia',
-            text: 'Exaltando a sua beleza natural.'
+            slides: {
+                slide1: {
+                    title: 'Salão da Márcia',
+                    text: 'Exaltando a sua beleza natural.'
+                },
+                slide2: {
+                    title: 'Experiência confirmada',
+                    text: '20 anos de experiência no mercado.'
+                }
+            }
         }
     });
 });

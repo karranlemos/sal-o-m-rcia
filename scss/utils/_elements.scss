@@ -34,9 +34,25 @@
     text-align: center;
 }
 
+
+
 .mobile-only {
     display: none !important;
 }
+.desktop-only {
+    display: initial;
+}
+
+@media screen and (max-width: $mobile-width) {
+    .mobile-only {
+        display: initial !important;
+    }
+    .desktop-only {
+        display: none !important;
+    }
+}
+
+
 
 .split-container {
     display: flex;

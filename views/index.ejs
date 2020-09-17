@@ -1,4 +1,10 @@
-<%- include('inc/main-header', Object.assign(headerContent, {bigHeader: true})) %>
+<div class="mobile-only">
+  <%Object.assign(headerContent.slides.slide1, {page: headerContent.page});%>
+  <%- include('inc/main-header', Object.assign(headerContent.slides.slide1), {page: headerContent.page}) %>
+</div>
+<div class="desktop-only">
+  <%- include('inc/main-carousel', headerContent) %>
+</div>
 
 <div class="container main-content">
   <div class="split-blocks">
