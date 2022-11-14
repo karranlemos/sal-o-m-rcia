@@ -430,7 +430,6 @@ template {
 }
 .split-container {
   display: flex;
-  height: 100%;
 }
 .split-container .primary {
   flex: 1 1;
